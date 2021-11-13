@@ -9,8 +9,9 @@ terraform {
 }
 
 # Configure the Microsoft Azure Provider
-provider "azurerm" {
+provider "azurerm" { 
   features {}
+}
 
 # Create a resource group
 resource "azurerm_resource_group" "example" {
@@ -33,3 +34,4 @@ resource "azurerm_subnet" "example" {
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.1.0/24"]
 } 
+    
